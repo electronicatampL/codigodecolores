@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código de Colores de Resistencias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Código de colores en resistencias</h1>
+    <p>El código de colores en las resistencias es un sistema utilizado para indicar el valor de la resistencia y su tolerancia. Se compone de varias bandas de colores pintadas en la resistencia. Cada color corresponde a un número específico. Las primeras dos o tres bandas indican el valor numérico, la siguiente banda muestra el multiplicador (por cuánto se debe multiplicar el número), y una última banda indica la tolerancia, que muestra cuánta variabilidad puede tener el valor de la resistencia.
+
+        Por ejemplo, si una resistencia tiene las bandas: marrón, negro, rojo y dorado, el valor sería 1000 ohmios (10 * 100) y la tolerancia sería ±5%.</p>
+    <div class="particles"></div> <!-- Elemento para partículas -->
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Color</th>
+                    <th>Valor</th>
+                    <th>Multiplicador</th>
+                    <th>Tolerancia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="color" style="background-color: black;"></td>
+                    <td>0</td>
+                    <td>x1</td>
+                    <td>±20%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: brown;"></td>
+                    <td>1</td>
+                    <td>x10</td>
+                    <td>±1%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: red;"></td>
+                    <td>2</td>
+                    <td>x100</td>
+                    <td>±2%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: orange;"></td>
+                    <td>3</td>
+                    <td>x1000</td>
+                    <td>±3%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: yellow;"></td>
+                    <td>4</td>
+                    <td>x10000</td>
+                    <td>±4%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: green;"></td>
+                    <td>5</td>
+                    <td>x100000</td>
+                    <td>±0.5%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: blue;"></td>
+                    <td>6</td>
+                    <td>x1000000</td>
+                    <td>±0.25%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: violet;"></td>
+                    <td>7</td>
+                    <td>x10000000</td>
+                    <td>±0.1%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: gray;"></td>
+                    <td>8</td>
+                    <td>x100000000</td>
+                    <td>±0.05%</td>
+                </tr>
+                <tr>
+                    <td class="color" style="background-color: white;"></td>
+                    <td>9</td>
+                    <td>infinito</td>
+                    <td>±1%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Librería para las partículas -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS('particles', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                shape: { type: 'circle', stroke: { width: 0, color: '#ff0000' } },
+                opacity: { value: 0.2, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 4, random: true, anim: { enable: false } },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 1, direction: 'random', random: true, straight: false, out_mode: 'out' }
+            },
+            interactivity: {
+                detect_on: 'window',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            }
+        });
+    </script>
+</body>
+</html>
